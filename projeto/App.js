@@ -18,6 +18,7 @@ import {
 } from 'react-native';
 
 import Card from './Card';
+import ItemDivider from './src/componentes/Divisor'
 
 
 
@@ -69,10 +70,26 @@ const Lista = [
     localizacao: 'Barueri',
     imagem:  'https://cajamar.sp.gov.br/noticias/wp-content/uploads/sites/2/2021/08/ed5d55c8-3966-4114-8ce4-9b9d0d25effd.png' ,
     texto: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'
+  },
+  {
+    titulo: 'titulo 3',
+    localizacao: 'Barueri',
+    imagem:  'https://cajamar.sp.gov.br/noticias/wp-content/uploads/sites/2/2021/08/ed5d55c8-3966-4114-8ce4-9b9d0d25effd.png' ,
+    texto: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'
+  },
+  {
+    titulo: 'titulo 3',
+    localizacao: 'Barueri',
+    imagem:  'https://cajamar.sp.gov.br/noticias/wp-content/uploads/sites/2/2021/08/ed5d55c8-3966-4114-8ce4-9b9d0d25effd.png' ,
+    texto: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'
   }
 
 
+
 ]
+
+
+
 
 const App = () => (
   <SafeAreaView>
@@ -83,6 +100,8 @@ const App = () => (
                   texto = {item.texto}
                 
            />}
+
+           ItemSeparatorComponent={ItemDivider}
   
         />
   
@@ -179,6 +198,26 @@ const styles = StyleSheet.create({
     fontSize:18,
     textAlign:'center'
   }
+});
+
+const styleSheet = StyleSheet.create({
+ 
+  MainContainer: {
+    flex: 1,
+    backgroundColor: 'white'
+  },
+ 
+  item: {
+    paddingLeft: 15,
+    paddingTop: 8,
+    paddingBottom: 8
+  },
+ 
+  itemText:{
+    fontSize: 24,
+    color: 'black'
+  }
+ 
 });
 
 export default App;

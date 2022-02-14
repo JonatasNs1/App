@@ -1,26 +1,24 @@
 import React, { useState } from 'react';
 import{View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
-
+// import IconButton from './iconButton';
 
 const heartOutline = require('../projeto/assets/icons/like.png');
-const heartSolid = require('../projeto/assets/icons/vermelho.png')
+const heartSolid = require('../projeto/assets/icons/vermelho.png');
 const bookmarkOutline = require('../projeto/assets/icons/salvar.jpg');
-const bookmarkSolid = require('../projeto/assets/icons/preto.jpg')
+const bookmarkSolid = require('../projeto/assets/icons/preto.jpg');
 
 const Card =({titulo, localizacao, imagem, texto}) =>{
  
 
 
-
-
-//  Colocando um comportamento, de quando clicar na imagem
+ //  Colocando um comportamento, de quando clicar na imagem
 
  const handleImageTouch = (cardTitulo) =>{
    console.log('Cliquei com o dedo na imagem ', cardTitulo);
  };
  
  //nome da funcao coloca set e o nome
- // UseState - vai gerar o primeiro valor agr do estado
+ // UseState - vai gerar o primeiro valor agr do estado, ele é uma função que rebece o estado inicial(valor inicial)
  const [like, setLike] = useState(false) // ela me retorna dois valores, [0] valorcorrente, [1] funcao moficadora
  const [bookmarked, setBookmarked] = useState(false)
 
@@ -57,22 +55,22 @@ const Card =({titulo, localizacao, imagem, texto}) =>{
       <View style={{flexDirection:'row' , marginVertical: 5}}>
 
      <TouchableOpacity onPress={ handleLike}>
-     <Image
-        style={  styles.cardIconBoxImage}
-        source={like ? heartSolid : heartOutline}
-          width={30}
-          height={30}
-        />
+            <Image
+                style={  styles.cardIconBoxImage}
+                source={like ? heartSolid : heartOutline}
+                  width={30}
+                  height={30}
+                />
 
      </TouchableOpacity>
 
      <TouchableOpacity onPress={ handleBookmark}>
-     <Image
-        style={  styles.cardIconBoxImage}
-        source={bookmarked? bookmarkSolid : bookmarkOutline}
-          width={30}
-          height={30}
-        />
+          <Image
+              style={  styles.cardIconBoxImage}
+              source={bookmarked? bookmarkSolid : bookmarkOutline}
+                width={30}
+                height={30}
+              />
 
      </TouchableOpacity>
 
@@ -127,4 +125,4 @@ const styles = StyleSheet.create({
   cardIconBoxImage: {marginRight:3},
 });
 
-  export default Card;
+export default Card;
