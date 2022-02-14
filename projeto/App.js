@@ -17,7 +17,7 @@ import {
  
 } from 'react-native';
 
-import Card from './componentes/Card';
+import Card from './Card';
 
 
 
@@ -54,7 +54,7 @@ const Lista = [
     titulo: 'titulo 1 ',
     localizacao: 'Itapevi',
     imagem:  'http://s2.glbimg.com/jsaPuF7nO23vRxQkuJ_V3WgouKA=/e.glbimg.com/og/ed/f/original/2014/06/10/461777879.jpg',
-   
+
     texto: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry' 
 
   },

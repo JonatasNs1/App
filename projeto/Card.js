@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
 import{View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 
+
 const heartOutline = require('../projeto/assets/icons/like.png');
 const heartSolid = require('../projeto/assets/icons/vermelho.png')
-const bookmarkOutline = require('../projeto/assets/icons/like.png');
-
+const bookmarkOutline = require('../projeto/assets/icons/salvar.jpg');
+const bookmarkSolid = require('../projeto/assets/icons/preto.jpg')
 
 const Card =({titulo, localizacao, imagem, texto}) =>{
  
- // Colocando um comportamento, de quando clicar na imagem
+
+
+
+
+//  Colocando um comportamento, de quando clicar na imagem
 
  const handleImageTouch = (cardTitulo) =>{
    console.log('Cliquei com o dedo na imagem ', cardTitulo);
@@ -22,11 +27,12 @@ const Card =({titulo, localizacao, imagem, texto}) =>{
  // tudo que começa com o use no react é um rook 
  const handleLike = () =>{
    setLike(!like);
-  //  console.log("like", like)
+   console.log("like", like)
  }
 
  const handleBookmark = () =>{
    setBookmarked(!bookmarked)
+   console.log("salvar", bookmarked)
  }
  
   return(
@@ -69,6 +75,8 @@ const Card =({titulo, localizacao, imagem, texto}) =>{
         />
 
      </TouchableOpacity>
+
+
 
       </View>
   
