@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import{View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 // import IconButton from './iconButton';
 
-const heartOutline = require('../projeto/assets/icons/like.png');
-const heartSolid = require('../projeto/assets/icons/vermelho.png');
-const bookmarkOutline = require('../projeto/assets/icons/salvar.jpg');
-const bookmarkSolid = require('../projeto/assets/icons/preto.jpg');
+const heartOutline = require('../../assets/icons/like.png');
+const heartSolid = require('../../assets/icons/vermelho.png');
+const bookmarkOutline = require('../../assets/icons/salvar.jpg');
+const bookmarkSolid = require('../../assets/icons/preto.jpg');
 
 const Card =({titulo, localizacao, imagem, texto}) =>{
  

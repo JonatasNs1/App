@@ -19,7 +19,7 @@ const IconButton = ({IconChecked, IconUnchecked}) =>{
         />  
              </TouchableOpacity>
       
-    )
+    );
 };
 
 export default IconButton;
