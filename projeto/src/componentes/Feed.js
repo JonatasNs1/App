@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-// import{View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
+import React from 'react';
+import{FlatList, View} from 'react-native';
 
 import ItemDivider from './Divisor';
 import Card from './Card';
@@ -43,17 +43,21 @@ const Lista = [
   ]
 
 const Feed = () =>{
+  return (
+    <View>
     <FlatList
-           data={Lista} renderItem={({item}) => <Card titulo= {item.titulo}
-                  localizacao = {item.localizacao}
-                  imagem = {item.imagem}
-                  texto = {item.texto}
-                
-           />}
+        data={Lista} renderItem={({item}) => <Card titulo= {item.titulo}
+               localizacao = {item.localizacao}
+               imagem = {item.imagem}
+               texto = {item.texto}
+             
+        />}
 
-           ItemSeparatorComponent={ItemDivider}
-  
-        />
+        ItemSeparatorComponent={ItemDivider}
+
+     />
+</View>
+  );
 }
 
 export default Feed;

@@ -3,19 +3,26 @@ import React, { useState } from "react";
 import { StyleSheet, TouchableOpacity, Image } from "react-native";
 
 
-const IconButton = ({IconChecked, IconUnchecked}) =>{
+const IconButton = ({iconChecked, iconUnchecked, ativado, desativado}) =>{
 
     const [checked, setChecked] = useState(false);
 
     const handleChecked =() =>{
-        setChecked(!checked)
+        setChecked(!checked);
+        if(checked){
+            ativado(checked);
+        }else{
+            desativado(checked);
+        }
     };
 
     return(
-        <TouchableOpacity>
+        <TouchableOpacity onPress ={handleChecked}>
               <Image
                      style={style.cardIconBoxImage}
-                      source={checked ? IconChecked : IconUnchecked}
+                      source={checked ? iconChecked : iconUnchecked}
+                      width={50}
+                      height={50}
         />  
              </TouchableOpacity>
       

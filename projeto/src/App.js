@@ -1,10 +1,4 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
+
 
 import React from 'react';
 import {
@@ -210,35 +204,3 @@ export default App;
 
 
 
-// data={Lista}
-// renderItem={({ item }) => {
-//   return (
-//     <View>
-//       <Text style={styles.titulo}>
-//           {item.titulo}
-//       </Text>
-
-//       <Text >
-//           {item.localizacao}
-//          </Text>
-//       <Text>
-//         {item.descricao}
-//       </Text>
-//       <Image
-//          style={
-//                 styles.imagem}
-//            resizeMode='cover'
-//              source={item.imagem}
-//              width={300}
-//              height={300}
-//       />
-
-//     <Text>
-//           {item.texto}
-//     </Text>
-
-//     </View>
-
-//   )
-
-// }}
