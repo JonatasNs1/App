@@ -17,24 +17,13 @@ const Card =({titulo, localizacao, imagem, texto}) =>{
    console.log('Cliquei com o dedo na imagem ', cardTitulo);
  };
 
- const [iconLike, setIconLike] = useState(false)
- const[iconSave, setSave] = useState(false)
+ const [like, setLike] = useState(false)
+ const[salvar, setSalvar] = useState(false)
+
+
  
-//  //nome da funcao coloca set e o nome
-//  // UseState - vai gerar o primeiro valor agr do estado, ele é uma função que rebece o estado inicial(valor inicial)
-//  const [like, setLike] = useState(false) // ela me retorna dois valores, [0] valorcorrente, [1] funcao moficadora
-//  const [bookmarked, setBookmarked] = useState(false)
+console.log(like);
 
-//  // tudo que começa com o use no react é um rook 
-//  const handleLike = () =>{
-//    setLike(!like);
-//    console.log("like", like)
-//  }
-
-//  const handleBookmark = () =>{
-//    setBookmarked(!bookmarked)
-//    console.log("salvar", bookmarked)
-//  }
  
   return(
     <View style={styles.card}>
@@ -56,50 +45,29 @@ const Card =({titulo, localizacao, imagem, texto}) =>{
      
        <Text> {texto}</Text> 
 
-    <Text  style={  styles.cardIconBoxImage}> Like: {String(iconLike)}</Text>
+    <Text> Like: {String(like)}</Text>
+    <Text> Salvar: {String(salvar)}</Text>
       <View style={{flexDirection:'row' , marginVertical: 5}}>
+
         <IconButton 
-        ativado = {setIconLike}
-        desativado = {setIconLike}
-          iconChecked={heartSolid} 
-          iconUnchecked={heartOutline}
+            ativado = {setLike}
+            desativado = {setLike}
+            
+            iconChecked={heartSolid} 
+            iconUnchecked={heartOutline}
         />
 
-    <Text style={  styles.cardIconBoxImage}> save: {String(iconSave)}</Text>
+
         <IconButton 
-         ativado = {setSave}
-         desativado = {setSave}
+          ativado = {setSalvar}
+          desativado = {setSalvar}
           iconChecked={bookmarkSolid}
           iconUnchecked={bookmarkOutline}
         
         />
 
-     {/* <TouchableOpacity onPress={ handleLike}>
-            <Image
-                style={  styles.cardIconBoxImage}
-                source={like ? heartSolid : heartOutline}
-                  width={30}
-                  height={30}
-                />
-
-     </TouchableOpacity>
-
-     <TouchableOpacity onPress={ handleBookmark}>
-          <Image
-              style={  styles.cardIconBoxImage}
-              source={bookmarked? bookmarkSolid : bookmarkOutline}
-                width={30}
-                height={30}
-              />
-
-     </TouchableOpacity> */}
-
-
 
       </View>
-  
-  
-       
         
   </View>
 
@@ -108,19 +76,6 @@ const Card =({titulo, localizacao, imagem, texto}) =>{
   );
 }
 
-
-
-// const Card =({title, location, image, text}) =>{
-//     return(
-//       <View>
-//           <Text>{title}</Text>
-//           <Text>{location}</Text>
-//           <Image source={{uri:image}}/>
-//           <Text> {text}</Text> 
-          
-//     </View>
-//     )
-//   }
 
 
 
@@ -139,10 +94,88 @@ const styles = StyleSheet.create({
   },
   like:{
     width:30,
-    height:30
+    height:30,
+    marginRight:30,
   },
   cardIconBox:{flexDirection: 'row', marginVertical:5},
   cardIconBoxImage: {marginRight:3},
 });
 
 export default Card;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const [icones]
+ 
+//  //nome da funcao coloca set e o nome
+//  // UseState - vai gerar o primeiro valor agr do estado, ele é uma função que rebece o estado inicial(valor inicial)
+//  const [like, setLike] = useState(false) // ela me retorna dois valores, [0] valorcorrente, [1] funcao moficadora
+//  const [bookmarked, setBookmarked] = useState(false)
+
+//  // tudo que começa com o use no react é um rook 
+//  const handleLike = () =>{
+//    setLike(!like);
+//    console.log("like", like)
+//  }
+
+//  const handleBookmark = () =>{
+//    setBookmarked(!bookmarked)
+//    console.log("salvar", bookmarked)
+//  }
+
+
+
+   {/* <TouchableOpacity onPress={ handleLike}>
+            <Image
+                style={  styles.cardIconBoxImage}
+                source={like ? heartSolid : heartOutline}
+                  width={30}
+                  height={30}
+                />
+
+     </TouchableOpacity>
+
+     <TouchableOpacity onPress={ handleBookmark}>
+          <Image
+              style={  styles.cardIconBoxImage}
+              source={bookmarked? bookmarkSolid : bookmarkOutline}
+                width={30}
+                height={30}
+              />
+     </TouchableOpacity> */}
+
+
+     // const Card =({title, location, image, text}) =>{
+//     return(
+//       <View>
+//           <Text>{title}</Text>
+//           <Text>{location}</Text>
+//           <Image source={{uri:image}}/>
+//           <Text> {text}</Text> 
+          
+//     </View>
+//     )
+//   }
