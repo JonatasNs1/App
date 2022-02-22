@@ -1,30 +1,19 @@
-
-
 import React from 'react';
-import {
-  StyleSheet,
-  SafeAreaView
- 
-} from 'react-native';
+import {StyleSheet, SafeAreaView} from 'react-native';
 
-
-import Feed from './componentes/Feed'
-
+import Feed from './componentes/Feed';
 
 // const LISTA = [...Array(200).keys()].map(e => 'Linha ' + e);
-
-
-
 
 // const App = ()  => (
 //   <View>
 //     <FlatList
-//          data={LISTA} 
+//          data={LISTA}
 //          renderItem={({item}) => (
 //          <View>
-//              <Image 
+//              <Image
 //                source={{uri: 'https://via.placeholder.com/20'}}
-//                width={20} 
+//                width={20}
 //                height={20}
 //               />
 
@@ -34,25 +23,23 @@ import Feed from './componentes/Feed'
 
 //     />
 
-
 //   </View>
 // );
 
-
 // const Lista = [
-//   { 
+//   {
 //     titulo: 'titulo 1 ',
 //     localizacao: 'Itapevi',
 //     imagem:  'http://s2.glbimg.com/jsaPuF7nO23vRxQkuJ_V3WgouKA=/e.glbimg.com/og/ed/f/original/2014/06/10/461777879.jpg',
 
-//     texto: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry' 
+//     texto: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'
 
 //   },
 //   {
 //     titulo: 'titulo 2',
 //     localizacao: 'Osasco',
 //     imagem:  'https://img.r7.com/images/rosto-humano-irreal-inteligencia-artificial-19022019142839436',
-//     texto: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry' 
+//     texto: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'
 //   },
 //   {
 //     titulo: 'titulo 3',
@@ -73,32 +60,13 @@ import Feed from './componentes/Feed'
 //     texto: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'
 //   }
 
-
-
-
 // ]
-
-
-
 
 const App = () => (
   <SafeAreaView>
-        <Feed/>
-  
-    </SafeAreaView>
-)
-
-
-
-
-
-
-
-
-
-
-
-
+    <Feed />
+  </SafeAreaView>
+);
 
 // const userData =[
 //   {
@@ -120,11 +88,6 @@ const App = () => (
 //   }
 // ];
 
-
-
-
-
-
 // function mostrarCard({item}){
 //   return(
 
@@ -139,9 +102,6 @@ const App = () => (
 //   )
 // }
 
-
-
-
 // const App = () =>(
 //   <View>
 //       <FlatList
@@ -155,52 +115,35 @@ const App = () => (
 
 //   </View>
 // );
- 
-
-
-
-
-
-
-
-
 
 const styles = StyleSheet.create({
-
   imagem: {
     width: 200,
-    height:200,
-    marginStart:20,
-    marginBottom:30
+    height: 200,
+    marginStart: 20,
+    marginBottom: 30,
   },
-  titulo:{
-    fontWeight:'bold',
-    fontSize:18,
-    textAlign:'center'
-  }
-});
+  titulo: {
+    fontWeight: 'bold',
+    fontSize: 18,
+    textAlign: 'center',
+  },
 
-const styleSheet = StyleSheet.create({
- 
   MainContainer: {
     flex: 1,
-    backgroundColor: 'white'
+    backgroundColor: 'white',
   },
- 
+
   item: {
     paddingLeft: 15,
     paddingTop: 8,
-    paddingBottom: 8
+    paddingBottom: 8,
   },
- 
-  itemText:{
+
+  itemText: {
     fontSize: 24,
-    color: 'black'
-  }
- 
+    color: 'black',
+  },
 });
 
 export default App;
-
-
-
